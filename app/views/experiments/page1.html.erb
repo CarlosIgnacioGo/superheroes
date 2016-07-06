@@ -1,1 +1,16 @@
 <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione dolor, sunt dignissimos! Cumque voluptas illo qui voluptatibus saepe reiciendis debitis quae, quidem facere modi dicta beatae possimus a iste incidunt.</h1>
+<h1 id="num"></h1>
+<script>
+	var num = <%=@num%>;
+	var elem = document.getElementById("num");
+
+	setInterval(function(){
+		if (num >= 0) {
+			elem.innerHTML = num;
+			num--
+		}else{
+			num = <%=@num%>
+		}
+		
+	},1000);
+</script>
