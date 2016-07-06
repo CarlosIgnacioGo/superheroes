@@ -8,7 +8,11 @@
 </head>
 <body>
 
+<% if flash[:notice] %>
+	<h2><%= flash[:notice] %></h2>
+<% elsif %>
+	<h2><%= flash[:alert] %></h2>
+<% end %>
 <%= yield %>
-
 </body>
 </html>

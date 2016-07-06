@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
+  get 'experiments/page1'
+
+  get 'experiments/page2'
+
+  get 'experiments/page3'
+
+  get 'pages/batman'
+  get 'pages/superman'
+  get 'pages/batmanvssuperman'
+  post 'pages/create'
+  root 'pages#batmanvssuperman'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
