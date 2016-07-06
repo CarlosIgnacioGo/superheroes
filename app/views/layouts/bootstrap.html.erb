@@ -13,13 +13,17 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<% if flash[:notice] %>
+<body class="<%= params[:controller] %>  <%= params[:action] %>">
+<section class="container">
+	<% if flash[:notice] %>
 	<h2><%= flash[:notice] %></h2>
-<% elsif %>
-	<h2><%= flash[:alert] %></h2>
-<% end %>
-<%= render 'layouts/navbar' %>
-<%= yield %>
+	<% elsif %>
+		<h2><%= flash[:alert] %></h2>
+	<% end %>
+	<%= render 'layouts/navbar' %>
+	<h1>Estas en la pagina: <%= params[:action]%></h1>
+	<%= yield %>
+</section>
+
 </body>
 </html>
